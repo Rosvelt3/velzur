@@ -1,81 +1,53 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="Velzur">
+  <header
+    class="relative bg-dark text-yellow h-[1000px] flex flex-col justify-center items-center mb-32"
+  >
+    <h1 class="text-[90px] text-center mb-6">
+      Una suscripción. <br /> Resultados ilimitados.
+    </h1>
+    <a
+      href="#"
+      class="px-7 py-6 border-2 border-yellow rounded-[20px] text-xl text-yellow bg-transparent hover:text-black hover:bg-yellow font-semibold"
+      >Ver Precios</a
+    >
+    <svg
+      width="541"
+      height="417"
+      viewBox="0 0 541 417"
+      xmlns="http://www.w3.org/2000/svg"
+      class="absolute fill-red right-0 bottom-0"
+    >
+      <path
+        d="M478.571 242.786C477.5 240.643 477.5 237.429 476.429 235.286C505.357 209.571 567.5 193.5 562.143 254.571C636.071 187.071 472.143 87.4286 428.214 159.214C426.071 157.071 425 156 422.857 154.929C433.571 117.429 480.714 69.2143 507.5 126C537.5 29.5714 343.571 26.3571 343.571 112.071C341.429 111 339.286 111 337.143 111C326.429 74.5714 342.5 4.92857 395 42.4286C373.571 -56.1428 202.143 38.1429 246.071 112.071C243.929 112.071 241.786 113.143 239.643 114.214C211.786 87.4286 191.429 19.9286 255.714 25.2857C188.214 -48.6429 87.5 116.357 161.429 160.286C159.286 161.357 158.214 163.5 156.071 165.643C118.571 156 69.2857 107.786 127.143 81C31.7857 51 27.5 240.643 110 244.929C108.929 247.071 108.929 250.286 107.857 252.429C70.3571 261 7.14285 243.857 42.5 193.5C-53.9286 214.929 33.9286 377.786 106.786 345.643C107.857 348.857 107.857 351 108.929 354.214C80 378.857 20 393.857 25.3571 333.857C-46.4286 399.214 105.714 495.643 155 434.571L161.429 441C147.5 476.357 104.643 516 78.9286 462.429C50 554.571 226.786 562.071 241.786 487.071C245 488.143 248.214 489.214 251.429 489.214C256.786 526.714 238.571 580.286 190.357 547.071C210.714 641.357 368.214 558.857 343.571 487.071L353.214 483.857C376.786 513.857 387.5 569.571 329.643 564.214C395 636 490.357 483.857 431.429 434.571L437.857 428.143C473.214 442.071 511.786 484.929 459.286 509.571C552.5 538.5 558.929 356.357 480.714 345.643C481.786 342.429 481.786 340.286 482.857 337.071C520.357 330.643 579.286 347.786 543.929 397.071C641.429 371.357 552.5 206.357 478.571 242.786Z"
+      ></path>
+    </svg>
+  </header>
+  <main>
+    <p class="font-semibold text-6xl max-w-7xl mx-auto mb-32">
+      Un sistema de suscripción creado para escalar tu negocio mediante el
+      diseño y desarrollo de software.
+    </p>
+    <div class="flex gap-6 justify-center">
+      <Card
+        title="Un modelo único."
+        body="Suscríbete a un plan y solicita todo el diseño y código que necesites."
+        className="bg-purple"
+      />
+      <Card
+        title="A la velocidad de la luz."
+        body="Recibe tu diseño y/o código en unos pocos días laborables."
+        className="bg-red"
+      />
+      <Card
+        title="Satisfacción primero."
+        body="Haremos todos los cambios necesarios hasta que estés 100% satisfecho."
+        className="bg-yellow text-dark"
+      />
+    </div>
+  </main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
