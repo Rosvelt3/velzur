@@ -1,14 +1,22 @@
 ---
+import { twMerge } from "tailwind-merge";
+
 export interface Props {
-	title: string;
-	body: string;
-	className: string;
+  title: string;
+  body: string;
+  className: string;
 }
 
 const { title, body, className } = Astro.props;
 ---
 
-<div class={`${className} px-5 py-9 text-white rounded-[55px] max-w-md min-h-[512px]`}>
-	<h2 class="text-3xl font-medium pb-5 mt-8">{title}</h2>
-	<p class="text-5xl font-medium">{body}</p>
+<div
+  class={
+	twMerge(
+	  "px-5 py-9 text-white rounded-[55px] max-w-md min-h-[512px]",
+	  className
+	)}
+>
+  <h2 class="text-3xl font-medium pb-5 mt-8">{title}</h2>
+  <p class="text-5xl font-medium">{body}</p>
 </div>
