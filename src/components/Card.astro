@@ -8,7 +8,7 @@ export interface Props {
 const { title, body, className } = Astro.props;
 ---
 
-<div class={`px-5 py-9 text-white rounded-[55px] max-w-md min-h-[512px] ${className}`}>
+<div class={`${className} px-5 py-9 text-white rounded-[55px] max-w-md min-h-[512px]`}>
 	<h2 class="text-3xl font-medium pb-5 mt-8">{title}</h2>
 	<p class="text-5xl font-medium">{body}</p>
 </div>
