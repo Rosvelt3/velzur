@@ -4,11 +4,11 @@ module.exports = {
 	theme: {
 		colors: {
 			dark: '#121212',
-			gray: '#252525',
-			'light-gray': '#333333',
-			'lighter-gray': '#555555',
+			gray: '#686868',
 			red: '#FF3B3B',
 			purple: '#731DFF',
+			'light-purple': '#F3ECFF',
+			'dark-purple': '#1E014F',
 			yellow: '#FFF500',
 			black: '#000000',
 			white: '#FCFCFC',
